@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Profile card component</title>
+
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: "Kumbh Sans", sans-serif;
+      }
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        min-width: 100vw;
+        overflow: hidden;
+        background-color: hsl(185, 75%, 39%);
+        position: relative;
+      }
+      .container::after {
+        content: url("./images/bg-pattern-top.svg");
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+      .container::before {
+        content: url("./images/bg-pattern-bottom.svg");
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+      .card-container {
+        z-index: 1;
+        border-radius: 20px;
+        box-shadow: 0px 0px 60px 0px hsla(229, 23%, 23%, 0.347);
+      }
+      .top-container img {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        display: block;
+      }
+      .bottom-container {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        background-color: hsl(0, 0%, 100%);
+        position: relative;
+      }
+      .user {
+        text-align: center;
+      }
+      .stats {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 50px;
+        padding-top: 30px;
+      }
+      .stats div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+      }
+      .stats div p:nth-child(1) {
+        font-weight: 700;
+        font-size: 18px;
+      }
+      .stats div p:nth-child(2) {
+        font-weight: 400;
+        font-size: 10px;
+        color: hsl(0, 0%, 59%);
+        letter-spacing: 2px;
+        padding-top: 5px;
+      }
+      hr {
+        background-color: hsla(0, 0%, 59%, 0.251);
+        border: none;
+        height: 1px;
+      }
+      .user div p {
+        font-weight: 500;
+        font-size: 14px;
+        color: hsl(0, 0%, 59%);
+        padding-top: 10px;
+        padding-bottom: 30px;
+      }
+      .user p {
+        font-size: 20px;
+        font-weight: 700;
+        padding-top: 70px;
+      }
+      .user p span {
+        color: hsl(0, 0%, 59%);
+        font-weight: 400;
+        margin-left: 0.5rem;
+      }
+      .avatar {
+        position: absolute;
+        top: -50px;
+        left: 35%;
+      }
+      .avatar img {
+        width: 100%;
+        border-radius: 50%;
+        border: 4px solid hsl(0, 0%, 100%);
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="card-container">
+          <div class="top-container">
+            <img src="./images/bg-pattern-card.svg" alt="" />
+          </div>
+          <div class="bottom-container">
+            <div class="avatar">
+              <img src="./images/image-victor.jpg" alt="">
+            </div>
+            <div class="user">
+              <p>Victor Crest <span>26</span></p>
+              <div><p>London</p></div>
+            </div>
+            <hr />
+            <div class="stats">
+              <div>
+                <p>80K</p>
+                <p>Followers</p>
+              </div>
+              <div>
+                <p>803K</p>
+                <p>Likes</p>
+              </div>
+              <div>
+                <p>1.4K</p>
+                <p>Photos</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
