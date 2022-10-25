@@ -31,22 +31,12 @@
         align-items: center;
         justify-content: center;
         min-height: 100vh;
-        min-width: 100vw;
         overflow: hidden;
+        background: url(../images/bg-pattern-top.svg),
+          url(../images/bg-pattern-bottom.svg);
+        background-position: right 52vw bottom 35vh, left 48vw top 52vh;
+        background-repeat: no-repeat, no-repeat;
         background-color: hsl(185, 75%, 39%);
-        position: relative;
-      }
-      .container::after {
-        content: url("./images/bg-pattern-top.svg");
-        position: absolute;
-        width: 100%;
-        height: 100%;
-      }
-      .container::before {
-        content: url("./images/bg-pattern-bottom.svg");
-        position: absolute;
-        width: 100%;
-        height: 100%;
       }
       .card-container {
         z-index: 1;
@@ -135,7 +125,7 @@
           </div>
           <div class="bottom-container">
             <div class="avatar">
-              <img src="./images/image-victor.jpg" alt="">
+              <img src="./images/image-victor.jpg" alt="" />
             </div>
             <div class="user">
               <p>Victor Crest <span>26</span></p>
